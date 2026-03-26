@@ -1,0 +1,14 @@
+[Unit]
+Description=chesshire_cat.service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/usr/bin
+ExecStart=/usr/bin/chesshire_cat_bot.sh
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
